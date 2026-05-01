@@ -54,15 +54,15 @@ struggle more at the extremes.
 
 ## Pipeline
 
-1. **Data Extraction** - ChEMBL API query for all BACE1 IC50 measurements
-2. **Data Cleaning** — unit standardisation, missing value removal, 
+1. **Data Extraction:** ChEMBL API query for all BACE1 IC50 measurements
+2. **Data Cleaning:** unit standardisation, missing value removal, 
    duplicate handling via median aggregation
-3. **Molecular Featurisation** — Morgan fingerprints (radius=2, 2048 bits) 
+3. **Molecular Featurisation:** Morgan fingerprints (radius=2, 2048 bits) 
    via RDKit
-4. **Dataset Splitting** — Bemis-Murcko scaffold split vs random split (80/20)
-5. **Model Training** — Random Forest and LightGBM with RandomizedSearchCV 
+4. **Dataset Splitting:** Bemis-Murcko scaffold split vs random split (80/20)
+5. **Model Training:** Random Forest and LightGBM with RandomizedSearchCV 
    hyperparameter tuning (5-fold CV)
-6. **Evaluation and Analysis** — RMSE, MAE, R² across both splits; residual 
+6. **Evaluation and Analysis:** RMSE, MAE, R² across both splits; residual 
    distributions, feature importance, RMSE by potency range
 
 
